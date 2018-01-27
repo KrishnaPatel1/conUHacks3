@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+         android:id="@+id/menu_myTeam"
+         android:title="@string/menu_myteam"
+         android:icon="@drawable/ic_myteam"
+         />
+     <item
+         android:id="@+id/menu_leaders"
+         android:title="@string/menu_leaders"
+         android:icon="@drawable/ic_leaders"
+         />
+     <item
+     android:id="@+id/menu_whosHot"
+     android:title="@string/menu_whoshot"
+     android:icon="@drawable/ic_whoshot"
+     />
+     <item
+     android:id="@+id/menu_settings"
+     android:title="@string/menu_settings"
+     android:icon="@drawable/ic_settings"
+     />
+</menu>

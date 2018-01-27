@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HelpMyLineup</string>
+    <string name="menu_myteam">My Team</string>
+    <string name="menu_leaders">Leaders</string>
+    <string name="menu_whoshot">Who\'s Hot</string>
+    <string name="menu_settings">Settings</string>
 </resources>
