@@ -40,7 +40,7 @@ public class Constant {
         teamID(int id){
             iD = id;
         }
-        public int getId(teamId team){
+        public int getId(teamID team){
             return team.iD;
         }
     }
