@@ -26,12 +26,15 @@ public class Home extends AppCompatActivity {
                                 break;
                             case R.id.menu_leaders:
                                 startActivity(new Intent(Home.this, LeadersActivity.class));
+                                finish();
                                 break;
                             case R.id.menu_whosHot:
                                 startActivity(new Intent(Home.this, WhosHot.class));
+                                finish();
                                 break;
                             case R.id.menu_settings:
                                 startActivity(new Intent(Home.this, SettingsActivity.class));
+                                finish();
                                 break;
                         }
                         return true;

@@ -1,12 +1,14 @@
 package conuhacks3.helpmylineup.Backend;
 
+import java.util.ArrayList;
+
 /**
  * Created by krish on 2018-01-27.
  */
 
 public class LeagueSettings {
 
-    private static int[] settings = new int[2];
+    private static String[] settings = new String[2];
     public enum StatValues{
         GOALS(0),
         ASSISTS(1),
@@ -39,8 +41,29 @@ public class LeagueSettings {
         public int getIndex(){return this.index;}
     };
 
-    public static int GetValue(StatValues stat)
+    public static int GetValue(StatValues stat)  {
+        return Integer.parseInt(settings[stat.getIndex()]);
+    }
+
+    public static void populateFields(ArrayList<String> list)
     {
-        return settings[stat.getIndex()];
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (list.get(i) != null){
+                settings[i] = list.get(i);
+            }
+        }
+    }
+
+    public static String getData()
+    {
+        String out = "Current Values: \n";
+
+        for (StatValues stat: StatValues.values())
+        {
+            out += stat.toString() + ": " + settings[stat.getIndex()] + "\n";
+        }
+        return out;
     }
 }
+
