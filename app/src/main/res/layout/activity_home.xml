@@ -1,28 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="conuhacks3.helpmylineup.Home">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Team"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        design:menu="@menu/bottom_nav_bar"
-     />
+        design:menu="@menu/bottom_nav_bar">
+    </android.support.design.widget.BottomNavigationView>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="404dp"
+        android:layout_height="538dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/navigation">
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <TableRow
+            android:id="@+id/tr3a"
+            android:padding="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/player_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Player Names"
+                android:textSize="12pt"></TextView>
+
+            <TextView
+                android:id="@+id/stats_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg Pts"
+                android:textSize="12pt"
+                app:layout_constraintLeft_toRightOf="@+id/player_header"></TextView>
+            </TableRow>
+
+            <TableRow>
+            <EditText
+                android:id="@+id/Player1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Player 1"
+                android:inputType="text"></EditText>
+
+            <TextView
+                android:id="@+id/player1_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+            <EditText
+            android:id="@+id/Player2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text"></EditText>
+
+            <TextView
+                android:id="@+id/player2_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 3"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player3_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 4"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player4_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 5"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player5_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player6"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 6"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player6_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player7"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 7"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player7_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player8"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 8"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player8_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player9"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 9"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player9_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player10"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 10"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player10_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player11"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 11"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player11_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/Player12"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Player 12"
+                    android:inputType="text"></EditText>
+
+                <TextView
+                    android:id="@+id/player12_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="aaaaaa"/>
+            </TableRow>
+
+            <Button
+                android:id="@+id/UpdateTeam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="updateTeam"
+                android:text="Update my Team"></Button>
+        </TableLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import java.util.ArrayList;
+
 
 public class Home extends AppCompatActivity {
 
@@ -37,6 +42,36 @@ public class Home extends AppCompatActivity {
                         return true;
                     }
                 });
+
     }
 
+    public void updateTeam(View view)
+    {
+        ArrayList<String> players = new ArrayList();
+
+        EditText nameField = (EditText) findViewById(R.id.Player1);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player2);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player3);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player4);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player5);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player6);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player7);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player8);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player9);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player10);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player11);
+        players.add(nameField.getText().toString());
+        nameField = (EditText) findViewById(R.id.Player12);
+        players.add(nameField.getText().toString());
+    }
 }
