@@ -1,27 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="conuhacks3.helpmylineup.Home">
+    tools:context="conuhacks3.helpmylineup.SettingsActivity">
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        design:menu="@menu/bottom_nav_bar"
-        />
+        design:menu="@menu/bottom_nav_bar" />
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/navigation">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter points for each stat:"
+                android:textSize="7pt"></TextView>
+
+            <EditText
+                android:id="@+id/GOALS"
+                android:layout_height="wrap_content"
+                android:hint="GOALS"
+                android:inputType="number"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/ASSISTS"
+                android:layout_height="wrap_content"
+                android:hint="ASSISTS"
+                android:inputType="number"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <Button
+                android:id="@+id/UpdateLeagueSettings"
+                android:layout_height="wrap_content"
+                android:text="Update League Settings"
+                android:onClick="updateLeagueSettings"
+                android:layout_width="fill_parent">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

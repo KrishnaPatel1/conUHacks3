@@ -6,6 +6,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -37,5 +39,11 @@ public class SettingsActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+    }
+
+    public void updateLeagueSettings(View view)
+    {
+        final EditText nameField = (EditText) findViewById(R.id.GOALS);
+        int name = Integer.parseInt(nameField.getText().toString());
     }
 }
