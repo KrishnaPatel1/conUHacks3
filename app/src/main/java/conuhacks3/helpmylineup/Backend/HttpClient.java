@@ -34,6 +34,7 @@ public class HttpClient {
             response.append('\r');
         }
         bufferedReader.close();
+        System.out.println(response.toString());
         return new JSONArray(response.toString());
     }
 }

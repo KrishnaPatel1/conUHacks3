@@ -14,7 +14,7 @@ public class Players {
     public static String getPlayer(String playerName) {
         try {
             JSONArray teams = HttpClient.GET(Constant.URI_PRE + Constant.URI_TEAMS);
-
+g
             for (int i = 0; i < teams.length(); i++) {
                 JSONObject team = teams.getJSONObject(i);
                 String teamId = (String) team.get("Id");
