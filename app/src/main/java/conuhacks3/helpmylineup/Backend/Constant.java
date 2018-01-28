@@ -47,5 +47,8 @@ public class Constant {
         }
     }
 
+    public static final String URI_PRE = "http://conu.astuce.media";
+    public static final String URI_TEAMS = "/api/sports/hockey/teams?Id=";
+
 
 }

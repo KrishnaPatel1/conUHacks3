@@ -6,13 +6,13 @@ package conuhacks3.helpmylineup.Backend;
 
 public class Statistics {
 
-    double toi;
     int gp;
 
     int goals;
     int assists;
-    int points;
+    /*int points;
     int pim;
+    double toi;
     int ppg;
     int ppa;
     int ppp;
@@ -32,7 +32,7 @@ public class Statistics {
     int sa;
     int sv;
     int ga;
-    int gaa;
+    int gaa;*/
 
     public double avgGoalSeason(){
        return this.goals/this.gp*LeagueSettings.GetValue(LeagueSettings.StatValues.GOALS);
