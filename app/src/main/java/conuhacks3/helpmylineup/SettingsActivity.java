@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import conuhacks3.helpmylineup.Backend.LeagueSettings;
+import conuhacks3.helpmylineup.Backend.Players;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -48,6 +49,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void updateLeagueSettings(View view)
     {
+        Players.getPlayer("Crosby");
         ArrayList<String> list = new ArrayList<>();
 
         EditText nameField = (EditText) findViewById(R.id.GOALS);

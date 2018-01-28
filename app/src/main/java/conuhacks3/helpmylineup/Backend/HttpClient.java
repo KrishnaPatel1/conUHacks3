@@ -1,5 +1,6 @@
 package conuhacks3.helpmylineup.Backend;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,7 +15,7 @@ import java.net.URL;
 import org.json.JSONObject;
 
 public class HttpClient {
-    public static JSONObject GET(String targetURL) throws ProtocolException, IOException, JSONException {
+    public static JSONArray GET(String targetURL) throws ProtocolException, IOException, JSONException {
         URL url = new URL(targetURL);
         HttpURLConnection connect = (HttpURLConnection) url.openConnection();
         connect.setRequestMethod("GET");
@@ -33,6 +34,6 @@ public class HttpClient {
             response.append('\r');
         }
         bufferedReader.close();
-        return new JSONObject(response.toString());
+        return new JSONArray(response.toString());
     }
 }
