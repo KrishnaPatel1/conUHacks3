@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import conuhacks3.helpmylineup.Backend.LeagueSettings;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -28,11 +33,11 @@ public class SettingsActivity extends AppCompatActivity {
                                 startActivity(new Intent(SettingsActivity.this, Home.class));
                                 break;
                             case R.id.menu_leaders:
-                                System.out.println("hi");
-
+                                startActivity(new Intent(SettingsActivity.this, LeadersActivity.class));
+                                break;
                             case R.id.menu_whosHot:
-                                System.out.println("hi");
-
+                                startActivity(new Intent(SettingsActivity.this, WhosHot.class));
+                                break;
                             case R.id.menu_settings:
 
                         }
@@ -43,7 +48,17 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void updateLeagueSettings(View view)
     {
-        final EditText nameField = (EditText) findViewById(R.id.GOALS);
-        int name = Integer.parseInt(nameField.getText().toString());
+        ArrayList<String> list = new ArrayList<>();
+
+        EditText nameField = (EditText) findViewById(R.id.GOALS);
+        list.add(nameField.getText().toString());
+
+        nameField = (EditText) findViewById(R.id.ASSISTS);
+            list.add(nameField.getText().toString());
+
+        LeagueSettings.populateFields(list);
+
+        TextView textView = (TextView) findViewById(R.id.CurrentStats);
+        textView.setText(LeagueSettings.getData());
     }
 }
